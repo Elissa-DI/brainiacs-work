@@ -1,0 +1,71 @@
+<center><h1>Login</h1>
+    <% if(messages.error) { %>
+         <%= messages.error %>
+         <% } %> 
+<style>
+    body {
+        background-color: gray;
+        padding-top: 25px;
+    }
+    body:hover {
+        background-color: darkgrey;
+    }
+    input {
+            width: 200px;
+            height: 35px;
+            box-shadow: 0px 0px 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        ::placeholder {
+            font-weight: bold;
+        } 
+        button {
+            background-color: green;
+            width: 85px;
+            height: 32px;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            box-shadow: 0px 0px 15px;
+        }
+        button:hover {
+            font-weight: bold;
+            width: 95px;
+            height: 34px;
+            box-shadow: 0px 0px 25px;
+        }
+        a {
+            color: black;
+            font-weight: bold;
+        }
+        h1 {
+            animation: color-1 5s infinite;
+        }
+        @keyframes color-1 {
+            0% {
+                  color: gray;
+            }
+            50% {
+                  color: black;
+            }
+            100% {
+                   color: black;
+            }
+        }
+
+        
+</style>
+<form action="/login" method="POST">
+    <div>
+        <label for="email"></label>
+        <input type="text" id="email" name="email" placeholder="Enter your email"required>
+    </div><br>
+    <div>
+        <label for="name"></label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div><br>
+    <center><button type="submit">Login</button><center>
+</form><br>
+<a href="/register">Register</a>
+</center>
